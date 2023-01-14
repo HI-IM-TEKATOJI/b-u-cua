@@ -7,6 +7,8 @@ btn1.addEventListener("click", function () {
   var dice10 = document.getElementById("dice10");
   var dice20 = document.getElementById("dice20");
   var dice30 = document.getElementById("dice30");
+  upside.classList.add("shake");
+  console.log(upside.classList);
   var i = 0;
   setInterval(() => {
     if (i >= 6) return;
@@ -18,6 +20,12 @@ btn1.addEventListener("click", function () {
     dice30.src = "./pictures/" + random3 + ".png";
     i++;
   }, 200);
+  setTimeout(function () {
+    upside.classList.remove("shake");
+    upside.classList.remove("down");
+    upside.classList.remove("up");
+  }, 1200);
+  console.log(upside.classList);
 });
 
 btn2.addEventListener("click", function () {
