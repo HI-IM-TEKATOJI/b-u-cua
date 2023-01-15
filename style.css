@@ -1,67 +1,86 @@
 #dia {
+  width: 40%;
+  height: auto;
   position: fixed;
   top: 20%;
   left: 33%;
   z-index: 1;
 }
 
+#dia > img {
+  width: 100%;
+  height: 100%;
+}
+
 #dice {
-  width: 500px;
-  height: 500px;
+  width: 40%;
+  height: auto;
   position: fixed;
-  top: 40%;
-  left: 43%;
+  top: 20%;
+  left: 33%;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 #dice > div {
-  float: left;
+  width: 12%;
+  height: auto;
 }
 
 #dice > div > img {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
   border-radius: 20%;
   box-shadow: 5px 5px 2px;
 }
 
 #dice1 {
-  margin-top: 20%;
+  margin-top: 40%;
+  margin-right: 7%;
 }
 
 #dice2 {
-  margin-left: 5%;
+  margin-top: 10%;
+  /* margin-right: 5%; */
 }
 
 #dice3 {
-  margin-top: 25%;
+  margin-top: 50%;
   margin-left: 2%;
 }
 
 #upside {
+  width: 55%;
+  height: auto;
   position: fixed;
-  top: 20%;
-  left: 33%;
+  top: 19%;
+  left: 25%;
   z-index: 3;
-  width: 500px;
-  height: 500px;
 }
 
 #upside > img {
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 #btn {
+  width: 30%;
+  height: auto;
   position: fixed;
-  top: 85%;
-  left: 40%;
+  top: 90%;
+  left: 37%;
   z-index: 4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 #btn > button {
-  width: 100px;
+  width: 100%;
   height: 100%;
 }
 
@@ -83,18 +102,41 @@
 
 @keyframes animate1 {
   0% {
-    top: 20%;
+    top: 19%;
   }
   100% {
-    top: -20%;
+    top: -29%;
   }
 }
 
 @keyframes animate2 {
   0% {
-    top: -20%;
+    top: -29%;
   }
   100% {
-    top: 20%;
+    top: 19%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #btn {
+    top: 50%;
+  }
+  @keyframes animate1 {
+    0% {
+      top: 19%;
+    }
+    100% {
+      top: -10%;
+    }
+  }
+
+  @keyframes animate2 {
+    0% {
+      top: -10%;
+    }
+    100% {
+      top: 19%;
+    }
   }
 }
